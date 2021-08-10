@@ -9,7 +9,7 @@
 
 library(shiny)
 library(plotly)
-data <- openxlsx::read.xlsx("/Users/paulinakurowska/Downloads/Polish_Children_Names/data_polish_names.xlsx")
+data <- openxlsx::read.xlsx("data_polish_names.xlsx")
 # Define UI for application that draws a histogram
 shinyUI(fluidPage(
 
@@ -34,4 +34,3 @@ shinyUI(fluidPage(
         )
     )
 ))
-#test
