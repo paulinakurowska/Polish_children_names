@@ -5,6 +5,6 @@ account: pkurowska
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 4477580
-bundleId: 4909084
+bundleId: 4909110
 url: https://pkurowska.shinyapps.io/polish_children_names/
-when: 1628627497.17115
+when: 1628627891.64813

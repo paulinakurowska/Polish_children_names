@@ -1,5 +1,6 @@
 library(shiny)
 library(plotly)
+library(dplyr)
 # Define server logic required to draw a histogram
 shinyServer(function(input, output) {
 
@@ -9,9 +10,10 @@ shinyServer(function(input, output) {
             filter(Gender == input$Gender, Year == input$Year) %>% 
             arrange(desc(Counts)) 
         
-        top_data <- plot_data%>% 
+        top_data <- plot_data %>% 
             slice(1:20)
-        title_string <- paste0("Children born: ", sum(plot_data$Counts), " in year ", input$Year)
+        title_string <- paste0("Children born: ", as.character(sum(plot_data$Counts)), " in year ", 
+                               as.character(input$Year))
         # draw the histogram with the specified number of bins
         #hist(x, breaks = bins, col = 'darkgray', border = 'white')
         ggplotly(top_data %>% 
